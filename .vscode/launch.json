@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "run dev & chrome",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev",
+            "serverReadyAction": {
+                "pattern": ".*?Local:.+?([0-9]+).*",
+                "uriFormat": "http://localhost:%s",
+                "action": "debugWithChrome"
+            }
+        },
+        {
+            "name": "chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5173"
+        }
+    ]
+}

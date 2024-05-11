@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demoアプリ - PVパネル配置</title>
+        <link href="/src/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header-section">
+                <h1>Demoアプリ - PVパネル配置</h1>
+            </div>
+
+            <div class="main-section">
+                <div id="mapid"></div>
+
+                <div class="side-bar">
+                    <div class="side-box">
+                        <div class="side-box-title">
+                            <h2>エリア情報</h2>
+                        </div>
+
+                        <label class="info-label">
+                            <span>都道府県</span>
+                            <select id="pv-area-select" class="info-select"></select>
+                        </label>
+                        <label class="info-label">
+                            <span>エリア</span>
+                            <select id="pv-point-select" class="info-select"></select>
+                        </label>
+                    </div>
+
+                    <div class="side-box mt1">
+                        <div class="side-box-title">
+                            <h2>PVパネル情報</h2>
+                        </div>
+                        <label class="info-label">
+                            <span>発電容量</span>
+                            <input
+                                id="panel-capacity"
+                                class="info-textbox medium-field"
+                                type="number"
+                                value="2"
+                                max="100"
+                                min="0.1"
+                                step="0.1"
+                            />
+                            kW
+                        </label>
+                        <label class="info-label">
+                            <span>縦</span>
+                            <input
+                                id="panel-vertical"
+                                class="info-textbox medium-field"
+                                type="number"
+                                value="1.2"
+                                max="100"
+                                min="0.1"
+                                step="0.1"
+                            />
+                            m
+                        </label>
+                        <label class="info-label">
+                            <span>横</span>
+                            <input
+                                id="panel-horizontal"
+                                class="info-textbox medium-field"
+                                type="number"
+                                value="0.6"
+                                max="100"
+                                min="0.1"
+                                step="0.1"
+                            />
+                            m
+                        </label>
+                    </div>
+
+                    <div class="side-box mt1">
+                        <div class="side-box-title">
+                            <h2>アレイ情報</h2>
+                        </div>
+                        <label class="info-label">
+                            <span>直列数</span>
+                            <input
+                                id="array-series"
+                                class="info-textbox medium-field"
+                                type="number"
+                                value="8"
+                                max="100"
+                                min="1"
+                            />
+                        </label>
+                        <label class="info-label">
+                            <span>並列数</span>
+                            <input
+                                id="array-parallel"
+                                class="info-textbox medium-field"
+                                type="number"
+                                value="3"
+                                max="100"
+                                min="1"
+                            />
+                        </label>
+                    </div>
+
+                    <div class="side-box mt1">
+                        <div class="side-box-title">
+                            <h2>配置情報</h2>
+                        </div>
+                        <button id="button-create-layout" class="placement-button">レイアウト作成</button>
+                        <button id="button-delete-layout" class="placement-button">レイアウト削除</button>
+                    </div>
+                </div>
+            </div>
+            <div class="calc-section">
+                <label>
+                    年間発電量<br />
+                    <input
+                        id="electric-generating-capacity"
+                        class="calc-textbox large-field underline"
+                        type="text"
+                        disabled
+                        value="0"
+                    />
+                    kWh
+                </label>
+
+                <label>
+                    年間日射量<br />
+                    <input id="kwh-m2-year" class="calc-textbox medium-field underline" type="text" disabled />
+                    kWh/㎡・y
+                </label>
+
+                <label>
+                    面積<br />
+                    <input id="total-area" class="calc-textbox medium-field underline" type="text" disabled value="0" />
+                    ㎡
+                </label>
+
+                <label>
+                    PVパネル数<br />
+                    <input
+                        id="total-panel-quantity"
+                        class="calc-textbox medium-field underline"
+                        disabled
+                        type="text"
+                        value="0"
+                    />
+                    枚
+                </label>
+
+                <label>
+                    総発電容量<br />
+                    <input
+                        id="total-panel-capacity"
+                        class="calc-textbox medium-field underline"
+                        disabled
+                        type="text"
+                        value="0"
+                    />
+                    kW
+                </label>
+            </div>
+        </div>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>

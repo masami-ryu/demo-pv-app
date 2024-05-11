@@ -1,0 +1,164 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.header-section {
+    margin: 0;
+    padding: 0;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 95vw;
+    height: 100vh;
+    margin: 0 2.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section {
+    height: 80vh;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mapid {
+    height: 80vh;
+    border-style: solid;
+    border-width: 0.1vh;
+    border-radius: 1vh;
+    cursor: crosshair;
+    flex-grow: 1;
+    margin-right: 2vw;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+}
+.side-box {
+    border-style: solid;
+    border-width: 0.1vh;
+    flex-direction: column;
+    display: flex;
+    padding: 1vh 1vw;
+    border-radius: 1vh;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.mt1 {
+    margin-top: 2vh;
+}
+
+.side-box-title {
+    margin: 0;
+}
+
+.placement-button {
+    height: 5vh;
+    margin: 1vh;
+    border-radius: 0.5vh;
+    background-color: #69b076;
+    color: white;
+}
+
+.placement-button:hover,
+.placement-button.active {
+    background-color: #f08300;
+}
+
+.info-label {
+    margin-left: 1vw;
+}
+
+.info-label span {
+    display: inline-block;
+    width: 8vw;
+}
+
+.info-select {
+    width: 10vw;
+    height: 3.5vh;
+}
+
+.info-textbox {
+    text-align: right;
+}
+
+.calc-textbox {
+    border: none;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.underline {
+    border-bottom: gray solid 1px;
+}
+
+.medium-field {
+    width: 8vw;
+}
+
+.large-field {
+    width: 11vw;
+}
+
+.calc-section {
+    height: 6vh;
+    margin-top: 2vh;
+    border-style: solid;
+    border-width: 0.1vh;
+    border-radius: 1vh;
+    padding: 2vh 2vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+button:disabled,
+button:hover:disabled {
+    background-color: #ccc;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+
+    button {
+        background-color: #f9f9f9;
+    }
+}
